@@ -24,5 +24,15 @@ namespace Asn1.Tests
                 Assert.IsTrue(new byte[] { 1, 1, 1 }.SequenceEqual(mb));
             }
         }
+
+        [TestMethod]
+        public void DeserializeBooleanTest()
+        {
+            var s = new BerSerializer();
+            using (var m = new MemoryStream(new byte[]{1,1,0}))
+            {
+                var b=s.Serialize()
+            }
+        }
     }
 }
